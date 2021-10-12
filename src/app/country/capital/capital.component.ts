@@ -3,11 +3,11 @@ import { Country } from 'src/app/core/models/country.interface';
 import { CountryService } from 'src/app/core/services/country.service';
 
 @Component({
-  selector: 'app-country',
-  templateUrl: './country.component.html',
-  styleUrls: ['./country.component.css'],
+  selector: 'app-capital',
+  templateUrl: './capital.component.html',
+  styleUrls: ['./capital.component.css'],
 })
-export class CountryComponent implements OnInit {
+export class CapitalComponent implements OnInit {
   countries!: Country[];
 
   constructor(private countryService: CountryService) {}
@@ -15,7 +15,7 @@ export class CountryComponent implements OnInit {
   ngOnInit(): void {}
 
   getCountry(term: string) {
-    this.countryService.getCountry(term).subscribe((data) => {
+    this.countryService.getCountryByCapital(term).subscribe((data) => {
       this.countries = data;
     });
   }

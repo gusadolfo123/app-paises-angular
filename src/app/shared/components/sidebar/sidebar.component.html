@@ -1,23 +1,26 @@
+<h3>Busqueda</h3>
 <div class="list-group">
   <a
-    [routerLink]="['']"
+    [routerLink]="['/country']"
     routerLinkActive="active"
-    href="#"
-    class="list-group-item list-group-item-action active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="list-group-item list-group-item-action"
     aria-current="true"
   >
-    The current link item
+    Por Pais
   </a>
-  <a href="#" class="list-group-item list-group-item-action"
-    >A second link item</a
+  <a
+    [routerLink]="['/region']"
+    routerLinkActive="active"
+    class="list-group-item list-group-item-action"
+    aria-current="true"
+    >por Region</a
   >
-  <a href="#" class="list-group-item list-group-item-action"
-    >A third link item</a
-  >
-  <a href="#" class="list-group-item list-group-item-action"
-    >A fourth link item</a
-  >
-  <a class="list-group-item list-group-item-action disabled"
-    >A disabled link item</a
+  <a
+    [routerLink]="['/capital']"
+    routerLinkActive="active"
+    class="list-group-item list-group-item-action"
+    aria-current="true"
+    >por Capital</a
   >
 </div>

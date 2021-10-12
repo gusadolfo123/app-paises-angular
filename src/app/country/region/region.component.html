@@ -1,0 +1,17 @@
+<div class="container row">
+  <h3>Por Region</h3>
+  <h5>Seleccione la region</h5>
+  <div class="col-12">
+    <button
+      type="button"
+      class="btn btn-outline-primary m-1"
+      *ngFor="let region of regiones"
+      (click)="searchCountryPerRegion(region)"
+    >
+      {{ region }}
+    </button>
+  </div>
+  <div class="row" *ngIf="countries">
+    <app-countries-table [countries]="countries"></app-countries-table>
+  </div>
+</div>
