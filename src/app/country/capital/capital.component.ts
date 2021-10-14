@@ -21,6 +21,7 @@ export class CapitalComponent implements OnInit {
       .getCountryByCapital(term)
       .pipe(tap(console.log))
       .subscribe((data) => {
+        this.suggestions = [];
         this.countries = data;
       });
   }

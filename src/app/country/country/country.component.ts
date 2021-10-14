@@ -18,6 +18,7 @@ export class CountryComponent implements OnInit {
 
   getCountry(term: string) {
     this.countryService.getCountry(term).subscribe((data) => {
+      this.suggestions = [];
       this.countries = data;
     });
   }
